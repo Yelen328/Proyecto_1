@@ -1,0 +1,70 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\Debug\Proyecto_1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Proyecto_1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Proyecto_1.map</FILE>
+  <FILE>Proyecto_1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <CONT_UMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>23</LINE></CONT_UMIN>
+  <CONT_DMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>24</LINE></CONT_DMIN>
+  <CONT_UHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>25</LINE></CONT_UHORA>
+  <CONT_DHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>26</LINE></CONT_DHORA>
+  <CICLO_UHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>27</LINE></CICLO_UHORA>
+  <COUNTER_DP><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>28</LINE></COUNTER_DP>
+  <SETUP><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>43</LINE></SETUP>
+  <PCINT_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>346</LINE></PCINT_ISR>
+  <TIMER1_INTERRUPT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>395</LINE></TIMER1_INTERRUPT>
+  <TIMER0_INTERRUPT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>426</LINE></TIMER0_INTERRUPT>
+  <INIT_TMR1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>165</LINE></INIT_TMR1>
+  <INIT_TMR0><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>176</LINE></INIT_TMR0>
+  <MOST_UMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>184</LINE></MOST_UMIN>
+  <MOST_DMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>194</LINE></MOST_DMIN>
+  <MOST_UHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>204</LINE></MOST_UHORA>
+  <MOST_DHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>214</LINE></MOST_DHORA>
+  <MAIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>132</LINE></MAIN>
+  <LLAMAR_MOST_HORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>154</LINE></LLAMAR_MOST_HORA>
+  <LLAMAR_CONF_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>158</LINE></LLAMAR_CONF_MIN>
+  <MOST_HORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>245</LINE></MOST_HORA>
+  <CONF_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>335</LINE></CONF_MIN>
+  <TABLA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>500</LINE></TABLA>
+  <TITILAR_LEDS><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>224</LINE></TITILAR_LEDS>
+  <SALIR_TITILAR_DP><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>237</LINE></SALIR_TITILAR_DP>
+  <SALTO_LEJOS><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>241</LINE></SALTO_LEJOS>
+  <SALIDA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>324</LINE></SALIDA>
+  <CONTINUA_US><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>303</LINE></CONTINUA_US>
+  <CONTINUA_DS><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>308</LINE></CONTINUA_DS>
+  <REVISAR_CICLO><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>285</LINE></REVISAR_CICLO>
+  <GUARDAR_CICLO><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>281</LINE></GUARDAR_CICLO>
+  <CONTINUA_UH><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>313</LINE></CONTINUA_UH>
+  <CONTINUA_DH><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>318</LINE></CONTINUA_DH>
+  <LED_CONF_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>327</LINE></LED_CONF_MIN>
+  <MOST_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>370</LINE></MOST_HORA1>
+  <SALIDA_PDINT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>388</LINE></SALIDA_PDINT>
+  <CONF_MIN1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>373</LINE></CONF_MIN1>
+  <SALIDA_PDINT_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>420</LINE></SALIDA_PDINT_ISR>
+  <ENCENDER_C4><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>453</LINE></ENCENDER_C4>
+  <ENCENDER_C3><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>460</LINE></ENCENDER_C3>
+  <ENCENDER_B5><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>466</LINE></ENCENDER_B5>
+  <ENCENDER_B4><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>472</LINE></ENCENDER_B4>
+  <FIN_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>491</LINE></FIN_ISR>
+  <MOSTRAR_DISPLAYT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>478</LINE></MOSTRAR_DISPLAYT>
+ </LABELS>
+</ASSEMBLER_INFO>
