@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm Fri Mar 21 02:14:25 2025
+AVRASM ver. 2.2.8  C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm Fri Mar 21 17:22:47 2025
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc'
@@ -1037,7 +1037,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  #endif  /* _M328PDEF_INC_ */
                                  
                                  ; ***** END OF FILE ******************************************************
-                                 .equ	T1VALUE			= 0xE17B
+                                 .equ	T1VALUE			= 0xC2F7
                                  .equ	T0VALUE			= 0xB1
                                  .equ	MODOS			= 9
                                  
@@ -1074,11 +1074,11 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  .org	0x0000
 000000 c020                      	RJMP	SETUP	//Vector Reset
                                  .org	PCI1addr
-000008 c3dd                      	RJMP	PCINT_ISR	//vector de interrupción PCINT1 (PIN CHANGE)
+000008 c390                      	RJMP	PCINT_ISR	//vector de interrupción PCINT1 (PIN CHANGE)
                                  .org	0x001A
-00001a c40d                      	RJMP	TIMER1_INTERRUPT	//Vector de interrupción del timer 1
+00001a c3c0                      	RJMP	TIMER1_INTERRUPT	//Vector de interrupción del timer 1
                                  .org	0X0020
-000020 c417                      	RJMP	TIMER0_INTERRUPT	//Vector de interrupción del timer 0
+000020 c3f4                      	RJMP	TIMER0_INTERRUPT	//Vector de interrupción del timer 0
                                  
                                  
                                  
@@ -1247,11 +1247,11 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
 0000b9 cfd4                      	RJMP	MAIN
                                  
                                  LLAMAR_CONF_MIN_ALARMA:
-0000ba 940e 036b                 	CALL	CONF_ALARMA_MIN
+0000ba 940e 031b                 	CALL	CONF_ALARMA_MIN
 0000bc cfd1                      	RJMP	MAIN
                                  
                                  LLAMAR_CONF_HORAA_ALARMA:
-0000bd 940e 03ab                 	CALL	CONF_HORAA_ALARMA
+0000bd 940e 035d                 	CALL	CONF_HORAA_ALARMA
 0000bf cfce                      	RJMP	MAIN
                                  
                                  	
@@ -1259,9 +1259,9 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  //************SUBRUTINAS***************
                                  //inicio de timers
                                  INIT_TMR1:
-0000c0 ee01                      	LDI		R16, HIGH (T1Value)
+0000c0 ec02                      	LDI		R16, HIGH (T1Value)
 0000c1 9300 0085                 	STS		TCNT1H, R16			// Carga TCNT1H (parte alta) 
-0000c3 e70b                      	LDI		R16, LOW(T1Value)
+0000c3 ef07                      	LDI		R16, LOW(T1Value)
 0000c4 9300 0084                 	STS		TCNT1L, R16			// Carga RCNT1L (Parte baja)
 0000c6 e000                      	LDI		R16, 0x00
 0000c7 9300 0080                 	STS		TCCR1A, R16			//Setear en modo normal
@@ -1279,7 +1279,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  //Se muestra la salida de los displays
                                  MOST_UMIN:
 0000d2 9100 0100                 	LDS		R16, CONT_UMIN
-0000d4 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+0000d4 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 0000d5 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 0000d6 0fe0                      	ADD		ZL, R16
 0000d7 1df1                      	ADC		ZH, R1
@@ -1292,7 +1292,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_DMIN:
 0000de 9100 0101                 	LDS		R16, CONT_DMIN
-0000e0 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+0000e0 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 0000e1 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 0000e2 0fe0                      	ADD		ZL, R16
 0000e3 1df1                      	ADC		ZH, R1
@@ -1305,7 +1305,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_UHORA:
 0000ea 9100 0102                 	LDS		R16, CONT_UHORA
-0000ec e8e6                      	LDI		ZL, LOW(TABLA<<1)
+0000ec e4e0                      	LDI		ZL, LOW(TABLA<<1)
 0000ed e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 0000ee 0fe0                      	ADD		ZL, R16
 0000ef 1df1                      	ADC		ZH, R1
@@ -1318,7 +1318,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_DHORA:
 0000f6 9100 0103                 	LDS		R16, CONT_DHORA
-0000f8 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+0000f8 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 0000f9 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 0000fa 0fe0                      	ADD		ZL, R16
 0000fb 1df1                      	ADC		ZH, R1
@@ -1331,7 +1331,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_UDIA:
 000102 9100 0104                 	LDS		R16, CONT_UDIA
-000104 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+000104 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 000105 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 000106 0fe0                      	ADD		ZL, R16
 000107 1df1                      	ADC		ZH, R1
@@ -1344,7 +1344,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_DDIA:
 00010e 9100 0105                 	LDS		R16, CONT_DDIA
-000110 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+000110 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 000111 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 000112 0fe0                      	ADD		ZL, R16
 000113 1df1                      	ADC		ZH, R1
@@ -1358,7 +1358,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_UMES:
 00011a 9100 0106                 	LDS		R16, CONT_UMES
-00011c e8e6                      	LDI		ZL, LOW(TABLA<<1)
+00011c e4e0                      	LDI		ZL, LOW(TABLA<<1)
 00011d e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 00011e 0fe0                      	ADD		ZL, R16
 00011f 1df1                      	ADC		ZH, R1
@@ -1371,7 +1371,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_DMES:
 000126 9100 0107                 	LDS		R16, CONT_DMES
-000128 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+000128 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 000129 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 00012a 0fe0                      	ADD		ZL, R16
 00012b 1df1                      	ADC		ZH, R1
@@ -1384,7 +1384,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_UMIN_ALARMA:
 000132 9100 010b                 	LDS		R16, CONT_UMIN_ALARMA
-000134 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+000134 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 000135 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 000136 0fe0                      	ADD		ZL, R16
 000137 1df1                      	ADC		ZH, R1
@@ -1397,7 +1397,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_DMIN_ALARMA:
 00013e 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
-000140 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+000140 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 000141 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 000142 0fe0                      	ADD		ZL, R16
 000143 1df1                      	ADC		ZH, R1
@@ -1410,7 +1410,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_UHORA_ALARMA:
 00014a 9100 010d                 	LDS		R16, CONT_UHORA_ALARMA
-00014c e8e6                      	LDI		ZL, LOW(TABLA<<1)
+00014c e4e0                      	LDI		ZL, LOW(TABLA<<1)
 00014d e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 00014e 0fe0                      	ADD		ZL, R16
 00014f 1df1                      	ADC		ZH, R1
@@ -1423,7 +1423,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  
                                  MOST_DHORA_ALARMA:
 000156 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA
-000158 e8e6                      	LDI		ZL, LOW(TABLA<<1)
+000158 e4e0                      	LDI		ZL, LOW(TABLA<<1)
 000159 e0f9                      	LDI		ZH, HIGH(TABLA<<1)
 00015a 0fe0                      	ADD		ZL, R16
 00015b 1df1                      	ADC		ZH, R1
@@ -1728,7 +1728,7 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
                                  LIMITE_DIAS:
                                  
 000245 e0f9                      	LDI		ZH, HIGH(DIAS_MESES<<1)	//Carga la parte alta de la tabla
-000246 e9e0                      	LDI		ZL, LOW(DIAS_MESES<<1)	//Cargar la parte baja de la tabla 
+000246 e4ea                      	LDI		ZL, LOW(DIAS_MESES<<1)	//Cargar la parte baja de la tabla 
 000247 0fe9                      	ADD		ZL, CONTADOR_MES		//Suma el contador al puntero Z
 000248 1df1                      	ADC		ZH, R1
 000249 9100 010a                 	LDS		R16, DIA_MAX
@@ -1969,573 +1969,529 @@ C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm(8): Including 
 00030b 9828                      	CBI		PORTB, PB0
 00030c 9829                      	CBI		PORTB, PB1
 00030d 3051                      	CPI		ACCION, 0x01	//Verifica si la bandera de acción está encendida
-00030e f481                      	BRNE	LLAMAR_SALIR_ALARMA
+00030e f421                      	BRNE	LLAMAR_SALIR_ALARMA
 00030f e050                      	LDI		ACCION, 0x00	//pone la bandera de nuevo en 0
                                  
-000310 9b30                      	SBIS	PINC, PC0			//SI el bit 0 del PINC es 0 (No apachado)
-000311 940e 0314                 	CALL	INC_CONT_ALARMA // Si está en 1 ejecuta esta línea
+000310 9b31                      	SBIS	PINC, PC1			//SI el bit 0 del PINC es 0 (No apachado)
+000311 c002                      	RJMP	APAGAR_ALARMA // Si está en 1 ejecuta esta línea
                                  	
-000313 c00b                      	RJMP	LLAMAR_SALIR_ALARMA
-                                 
-                                 INC_CONT_ALARMA:
-000314 9100 010f                 	LDS		R16, INDICADOR_ALARMA
-000316 9503                      	INC		R16
-000317 3001                      	CPI		R16, 1
-000318 f039                      	BREQ	ACTIVAR_ALARMA
-000319 9300 010f                 	STS		INDICADOR_ALARMA, R16
-00031b e000                      	LDI		R16, 0x00
-00031c 9300 0314                 	STS		INC_CONT_ALARMA, R16
-00031e c000                      	RJMP	LLAMAR_SALIR_ALARMA
+000312 c000                      	RJMP	LLAMAR_SALIR_ALARMA
                                  
                                  LLAMAR_SALIR_ALARMA:
-00031f c04a                      	RJMP	SALIR_ALARMA
+000313 c006                      	RJMP	SALIR_ALARMA
                                  
                                  
-                                 ACTIVAR_ALARMA:
-000320 9a2b                      	SBI		PORTB, PB3
-000321 9300 010f                 	STS		INDICADOR_ALARMA, R16
                                  
-000323 9100 010b                 	LDS		R16, CONT_UMIN_ALARMA
-000325 9110 0100                 	LDS		R17, CONT_UMIN
-000327 1701                      	CP		R16, R17
-000328 f569                      	BRNE	SALIR_ACT_UMIN
-000329 9300 010b                 	STS		CONT_UMIN_ALARMA, R16
-00032b 9310 0100                 	STS		CONT_UMIN, R17
+                                 APAGAR_ALARMA:
+000314 982a                          CBI     PORTB, PB2          ; Apaga el buzzer
+000315 982b                          CBI     PORTB, PB3          ; Apaga el LED indicador
+000316 e000                          LDI     R16, 0x00
+000317 9300 010f                     STS     INDICADOR_ALARMA, R16
+000319 9508                          RET
                                  
-00032d 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
-00032f 9110 0101                 	LDS		R17, CONT_DMIN
-000331 1701                      	CP		R16, R17
-000332 f541                      	BRNE	SALIR_ACT_DMIN
-000333 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
-000335 9310 0101                 	STS		CONT_DMIN, R17
-                                 
-000337 9100 010d                 	LDS		R16, CONT_UHORA_ALARMA
-000339 9110 0102                 	LDS		R17, CONT_UHORA
-00033b 1701                      	CP		R16, R17
-00033c f519                      	BRNE	SALIR_ACT_UHORA
-00033d 9300 010d                 	STS		CONT_UHORA_ALARMA, R16
-00033f 9310 0102                 	STS		CONT_UHORA, R17
-                                 
-000341 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA
-000343 9110 0103                 	LDS		R17, CONT_DHORA
-000345 1701                      	CP		R16, R17
-000346 f4f1                      	BRNE	SALIR_ACT_DHORA
-000347 9300 010e                 	STS		CONT_DHORA_ALARMA, R16
-000349 9310 0103                 	STS		CONT_DHORA, R17
-                                 
-00034b 9a2a                      	SBI		PORTB, PB2
-                                 
-                                 ESPERAR_DESACTIVACION:
-00034c 9b31                          SBIS    PINC, PC1           ; Si el botón de apagado está presionado
-00034d 940e 0350                     CALL    APAGAR
-00034f c01a                          RJMP    SALIR_ALARMA
-                                 APAGAR:
-000350 982a                          CBI     PORTB, PB2          ; Apaga el buzzer
-000351 982b                          CBI     PORTB, PB3          ; Apaga el LED indicador
-000352 e000                          LDI     R16, 0x00
-000353 9300 010f                     STS     INDICADOR_ALARMA, R16
-000355 9508                          RET
-                                 
-                                 /*	RJMP	APAGAR
-                                 	SBIS	PINC, PC1			//SI el bit 0 del PINC es 0 (No apachado)
-                                 	CALL	APAGAR				 // Si está en 1 ejecuta esta línea
-                                 	RJMP	SALIR_ALARMA
-                                 
-                                 APAGAR:
-                                 	CBI		PORTB, PB2
-                                 	RET*/
-                                 
-                                 
-                                 SALIR_ACT_UMIN:
-000356 9300 010b                 	STS		CONT_UMIN_ALARMA, R16
-000358 9310 0100                 	STS		CONT_UMIN, R17
-00035a c00f                      	RJMP	SALIR_ALARMA
-                                 
-                                 SALIR_ACT_DMIN:
-00035b 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
-00035d 9310 0101                 	STS		CONT_DMIN, R17
-00035f c00a                      	RJMP	SALIR_ALARMA
-                                 
-                                 SALIR_ACT_UHORA:
-000360 9300 010d                 	STS		CONT_UHORA_ALARMA, R16
-000362 9310 0102                 	STS		CONT_UHORA, R17
-000364 c005                      	RJMP	SALIR_ALARMA
-                                 
-                                 SALIR_ACT_DHORA:
-000365 9300 010e                 	STS		CONT_DHORA_ALARMA, R16
-000367 9310 0103                 	STS		CONT_DHORA, R17
-000369 c000                      	RJMP	SALIR_ALARMA
                                  	
                                  SALIR_ALARMA:
-00036a 9508                      RET
+00031a 9508                      RET
                                  
                                  CONF_ALARMA_MIN:
-00036b 9828                      	CBI		PORTB, PB0
-00036c 982c                      	CBI		PORTB, PB4		//Se apagan los leds que no se están usando s
-00036d 982d                      	CBI		PORTB, PB5
-00036e 9a5f                      	SBI		PORTD, PD7
-00036f 982a                      	CBI		PORTB, PB2
-000370 3051                      	CPI		ACCION, 0x01	//Verifica si la bandera de acción está encendida
-000371 f5c1                      	BRNE	SALIDA_CONF_MALARMA
-000372 e050                      	LDI		ACCION, 0x00	//pone la bandera de nuevo en 0
+00031b 9a2b                      	SBI		PORTB, PB3
+00031c e0b0                      	LDI		R27, 0x00
+00031d 9828                      	CBI		PORTB, PB0
+00031e 982c                      	CBI		PORTB, PB4		//Se apagan los leds que no se están usando s
+00031f 982d                      	CBI		PORTB, PB5
+000320 9a5f                      	SBI		PORTD, PD7
+000321 982a                      	CBI		PORTB, PB2
+000322 3051                      	CPI		ACCION, 0x01	//Verifica si la bandera de acción está encendida
+000323 f5c1                      	BRNE	SALIDA_CONF_MALARMA
+000324 e050                      	LDI		ACCION, 0x00	//pone la bandera de nuevo en 0
                                  	
-000373 9b30                      	SBIS	PINC, PC0	//SI el bit 0 del PINC es 0 (No apachado)
-000374 940e 037a                 	CALL	INC_CONT_ALARMA_MIN // Si está en 1 ejecuta esta línea
-000376 9b31                      	SBIS	PINC, PC1	//SI el bit 0 del PINC es 0 (No apachado)
-000377 940e 038d                 	CALL	DEC_CONT_ALARMA_MIN // Si está en 1 ejecuta esta línea
-000379 ce6d                      	RJMP	SALIDA_CONF_MIN
+000325 9b30                      	SBIS	PINC, PC0	//SI el bit 0 del PINC es 0 (No apachado)
+000326 940e 032c                 	CALL	INC_CONT_ALARMA_MIN // Si está en 1 ejecuta esta línea
+000328 9b31                      	SBIS	PINC, PC1	//SI el bit 0 del PINC es 0 (No apachado)
+000329 940e 033f                 	CALL	DEC_CONT_ALARMA_MIN // Si está en 1 ejecuta esta línea
+00032b cebb                      	RJMP	SALIDA_CONF_MIN
                                  
                                  INC_CONT_ALARMA_MIN:
-00037a 9110 010b                 	LDS		R17, CONT_UMIN_ALARMA
-00037c 9513                      	INC		R17
-00037d 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
-00037f 301a                      	CPI		R17, 0x0A
-000380 f511                      	BRNE	CONTINUA_U_ALARMA
-000381 2711                      	CLR		R17
+00032c 9110 010b                 	LDS		R17, CONT_UMIN_ALARMA
+00032e 9513                      	INC		R17
+00032f 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
+000331 301a                      	CPI		R17, 0x0A
+000332 f511                      	BRNE	CONTINUA_U_ALARMA
+000333 2711                      	CLR		R17
                                  
                                  	//decenas de minutos 
-000382 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
-000384 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
-000386 9503                      	INC		R16
-000387 3006                      	CPI		R16, 0x06
-000388 f4e9                      	BRNE	CONTINUA_D_ALARMA
-000389 2700                      	CLR		R16
-00038a 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
-00038c 9508                      	RET
+000334 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
+000336 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
+000338 9503                      	INC		R16
+000339 3006                      	CPI		R16, 0x06
+00033a f4e9                      	BRNE	CONTINUA_D_ALARMA
+00033b 2700                      	CLR		R16
+00033c 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
+00033e 9508                      	RET
                                  
                                  DEC_CONT_ALARMA_MIN:
-00038d 9110 010b                 	LDS		R17, CONT_UMIN_ALARMA
-00038f 3010                      	CPI		R17, 0x00
-000390 f021                      	BREQ	UNDERFLOW_UMIN_ALARMA
-000391 951a                      	DEC		R17
-000392 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
-000394 c014                      	RJMP	SALIDA_CONF_MIN_ALARMA
+00033f 9110 010b                 	LDS		R17, CONT_UMIN_ALARMA
+000341 3010                      	CPI		R17, 0x00
+000342 f021                      	BREQ	UNDERFLOW_UMIN_ALARMA
+000343 951a                      	DEC		R17
+000344 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
+000346 c014                      	RJMP	SALIDA_CONF_MIN_ALARMA
                                  
                                  UNDERFLOW_UMIN_ALARMA:
-000395 e019                      	LDI		R17, 0x09	//Reiniciar a 9
+000347 e019                      	LDI		R17, 0x09	//Reiniciar a 9
                                  
                                  	//decenas de minutos 
-000396 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
-000398 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
-00039a 3000                      	CPI		R16, 0x00
-00039b f021                      	BREQ	UNDERFLOW_DMIN_ALARMA
-00039c 950a                      	DEC		R16
-00039d 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
-00039f c009                      	RJMP	SALIDA_CONF_MIN_ALARMA
+000348 9310 010b                 	STS		CONT_UMIN_ALARMA, R17
+00034a 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
+00034c 3000                      	CPI		R16, 0x00
+00034d f021                      	BREQ	UNDERFLOW_DMIN_ALARMA
+00034e 950a                      	DEC		R16
+00034f 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
+000351 c009                      	RJMP	SALIDA_CONF_MIN_ALARMA
                                  
                                  UNDERFLOW_DMIN_ALARMA:
-0003a0 e005                      	LDI		R16, 0x05
-0003a1 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
+000352 e005                      	LDI		R16, 0x05
+000353 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
                                  
                                  CONTINUA_U_ALARMA:
-0003a3 9310 0100                 	STS		CONT_UMIN, R17
-0003a5 ce41                      	RJMP	SALIDA_CONF_MIN
+000355 9310 0100                 	STS		CONT_UMIN, R17
+000357 ce8f                      	RJMP	SALIDA_CONF_MIN
                                  
                                  CONTINUA_D_ALARMA:
-0003a6 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
-0003a8 ce3e                      	RJMP	SALIDA_CONF_MIN
+000358 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
+00035a ce8c                      	RJMP	SALIDA_CONF_MIN
                                  
                                  SALIDA_CONF_MIN_ALARMA:
-0003a9 9508                      	RET
+00035b 9508                      	RET
                                  
                                  SALIDA_CONF_MALARMA:
-0003aa 9508                      	RET
+00035c 9508                      	RET
                                  
                                  CONF_HORAA_ALARMA:
-0003ab 9843                      	CBI		PORTC, PC3		//apaga los displays que no se están modificando 
-0003ac 9844                      	CBI		PORTC, PC4
-0003ad 9a5f                      	SBI		PORTD, PD7		//Deja de titilar los dos puntos 
-0003ae 3051                      	CPI		ACCION, 0x01	//Verifica si la bandera de acción está encendida
-0003af f5a9                      	BRNE	SALIDA_CONF_HORAA_ALARMA
-0003b0 e050                      	LDI		ACCION, 0x00	//pone la bandera de nuevo en 0
+00035d 9843                      	CBI		PORTC, PC3		//apaga los displays que no se están modificando 
+00035e 9844                      	CBI		PORTC, PC4
+00035f 9a5f                      	SBI		PORTD, PD7		//Deja de titilar los dos puntos 
+000360 3051                      	CPI		ACCION, 0x01	//Verifica si la bandera de acción está encendida
+000361 f5a9                      	BRNE	SALIDA_CONF_HORAA_ALARMA
+000362 e050                      	LDI		ACCION, 0x00	//pone la bandera de nuevo en 0
                                  
-0003b1 9b30                      	SBIS	PINC, PC0	//SI el bit 0 del PINC es 0 (No apachado)
-0003b2 940e 03b8                 	CALL	INC_CONT2_ALARMA // Si está en 1 ejecuta esta línea
-0003b4 9b31                      	SBIS	PINC, PC1	//SI el bit 0 del PINC es 0 (No apachado)
-0003b5 940e 03ce                 	CALL	DEC_CONT2_ALARMA // Si está en 1 ejecuta esta línea
-0003b7 c02d                      	RJMP	SALIDA_CONF_HORAA_ALARMA
+000363 9b30                      	SBIS	PINC, PC0	//SI el bit 0 del PINC es 0 (No apachado)
+000364 940e 036a                 	CALL	INC_CONT2_ALARMA // Si está en 1 ejecuta esta línea
+000366 9b31                      	SBIS	PINC, PC1	//SI el bit 0 del PINC es 0 (No apachado)
+000367 940e 0380                 	CALL	DEC_CONT2_ALARMA // Si está en 1 ejecuta esta línea
+000369 c02d                      	RJMP	SALIDA_CONF_HORAA_ALARMA
                                  
                                  INC_CONT2_ALARMA:
-0003b8 9110 010d                 	LDS		R17, CONT_UHORA_ALARMA	//Cargar unidades a R17
-0003ba 9513                      	INC		R17				//Incrementar las unidades
+00036a 9110 010d                 	LDS		R17, CONT_UHORA_ALARMA	//Cargar unidades a R17
+00036c 9513                      	INC		R17				//Incrementar las unidades
                                  	//Verificar si las decenas ya es 2
-0003bb 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA	//Cargar decenas a R16
-0003bd 3002                      	CPI		R16, 0x02		//Comparar si las decenas es igua a 2
-0003be f049                      	BREQ	REVISAR_LIMITE24_ALARMA//Si es igual a 2, revisa si debe reiniciar
+00036d 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA	//Cargar decenas a R16
+00036f 3002                      	CPI		R16, 0x02		//Comparar si las decenas es igua a 2
+000370 f049                      	BREQ	REVISAR_LIMITE24_ALARMA//Si es igual a 2, revisa si debe reiniciar
                                  
                                  	//si las unidades llega a 10, resetear y aumentar decenas
-0003bf 301a                      	CPI		R17, 0x0A		//comparar si las unidades ya llegaró a 10
-0003c0 f411                      	BRNE	GUARDAR_CICLO2_ALARMA	//si no, solo guardar
-0003c1 2711                      	CLR		R17				//si es igual a 10, reiniciar
-0003c2 9503                      	INC		R16				//incrementar decenas
+000371 301a                      	CPI		R17, 0x0A		//comparar si las unidades ya llegaró a 10
+000372 f411                      	BRNE	GUARDAR_CICLO2_ALARMA	//si no, solo guardar
+000373 2711                      	CLR		R17				//si es igual a 10, reiniciar
+000374 9503                      	INC		R16				//incrementar decenas
                                  
                                  GUARDAR_CICLO2_ALARMA:
-0003c3 9300 010e                 	STS		CONT_DHORA_ALARMA, R16	
-0003c5 9310 010d                 	STS		CONT_UHORA_ALARMA, R17	//Guardar el valor actual de cada registro en la SRAM correspondiente
-0003c7 c005                      	RJMP	SALIDA_CONF_HORA_ALARMA
+000375 9300 010e                 	STS		CONT_DHORA_ALARMA, R16	
+000377 9310 010d                 	STS		CONT_UHORA_ALARMA, R17	//Guardar el valor actual de cada registro en la SRAM correspondiente
+000379 c005                      	RJMP	SALIDA_CONF_HORA_ALARMA
                                  
                                  REVISAR_LIMITE24_ALARMA:
                                  	//Si las unidades llegaron a 5, hacer overflow
-0003c8 3014                      	CPI		R17, 0x04		//revisar si las unidaddes llegó a 5
-0003c9 f7c9                      	BRNE	GUARDAR_CICLO2_ALARMA	//si no, Solamente guardar
-0003ca 2711                      	CLR		R17				//si es igual a 5 reiniciar
-0003cb 2700                      	CLR		R16				//reiniciar decenas
-0003cc cff6                      	RJMP	GUARDAR_CICLO2_ALARMA	//mostrar las salidas
+00037a 3014                      	CPI		R17, 0x04		//revisar si las unidaddes llegó a 5
+00037b f7c9                      	BRNE	GUARDAR_CICLO2_ALARMA	//si no, Solamente guardar
+00037c 2711                      	CLR		R17				//si es igual a 5 reiniciar
+00037d 2700                      	CLR		R16				//reiniciar decenas
+00037e cff6                      	RJMP	GUARDAR_CICLO2_ALARMA	//mostrar las salidas
                                  	
                                  
                                  SALIDA_CONF_HORA_ALARMA:
-0003cd 9508                      	RET
+00037f 9508                      	RET
                                  
                                  DEC_CONT2_ALARMA:
-0003ce 9110 010d                 	LDS		R17, CONT_UHORA_ALARMA	//Cargar unidades a R17
-0003d0 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA	//Cargar decenas a R16
-0003d2 3010                      	CPI		R17, 0x00		//Comparar si es 0
-0003d3 f429                      	BRNE	DEC_UNIDADES_ALARMA
-0003d4 3000                      	CPI		R16, 0x00
-0003d5 f419                      	BRNE	DEC_UNIDADES_ALARMA
-0003d6 e002                      	LDI		R16, 0x02
-0003d7 e013                      	LDI		R17, 0x03
-0003d8 c007                      	RJMP	GUARDAR_DEC_ALARMA
+000380 9110 010d                 	LDS		R17, CONT_UHORA_ALARMA	//Cargar unidades a R17
+000382 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA	//Cargar decenas a R16
+000384 3010                      	CPI		R17, 0x00		//Comparar si es 0
+000385 f429                      	BRNE	DEC_UNIDADES_ALARMA
+000386 3000                      	CPI		R16, 0x00
+000387 f419                      	BRNE	DEC_UNIDADES_ALARMA
+000388 e002                      	LDI		R16, 0x02
+000389 e013                      	LDI		R17, 0x03
+00038a c007                      	RJMP	GUARDAR_DEC_ALARMA
                                  
                                  DEC_UNIDADES_ALARMA:
-0003d9 3010                      	CPI		R17, 0x00
-0003da f419                      	BRNE	RESTARU_ALARMA
-0003db e019                      	LDI		R17, 0x09
-0003dc 950a                      	DEC		R16
-0003dd c002                      	RJMP	GUARDAR_DEC_ALARMA
+00038b 3010                      	CPI		R17, 0x00
+00038c f419                      	BRNE	RESTARU_ALARMA
+00038d e019                      	LDI		R17, 0x09
+00038e 950a                      	DEC		R16
+00038f c002                      	RJMP	GUARDAR_DEC_ALARMA
                                  
                                  RESTARU_ALARMA:
-0003de 951a                      	DEC		R17
-0003df c000                      	RJMP	GUARDAR_DEC_ALARMA
+000390 951a                      	DEC		R17
+000391 c000                      	RJMP	GUARDAR_DEC_ALARMA
                                  
                                  
                                  GUARDAR_DEC_ALARMA:
-0003e0 9310 010d                 	STS		CONT_UHORA_ALARMA, R17
-0003e2 9300 010e                 	STS		CONT_DHORA_ALARMA, R16
+000392 9310 010d                 	STS		CONT_UHORA_ALARMA, R17
+000394 9300 010e                 	STS		CONT_DHORA_ALARMA, R16
                                  
                                  SALIDA_CONF_HORA_ALARMA1:
-0003e4 9508                      	RET
+000396 9508                      	RET
                                  
                                  SALIDA_CONF_HORAA_ALARMA:
-0003e5 9508                      	RET
+000397 e0b1                      	LDI		R27, 0x01
+000398 9508                      	RET
                                  
                                  
                                  	
                                  /*****************INTERRUPCIONES***********/
                                  //PIN CHANGE
                                  PCINT_ISR:
-0003e6 930f                      	PUSH	R16
-0003e7 b70f                      	IN		R16, SREG
-0003e8 930f                      	PUSH	R16
+000399 930f                      	PUSH	R16
+00039a b70f                      	IN		R16, SREG
+00039b 930f                      	PUSH	R16
                                  
                                  	//Check si el botón de modo fue presionado 
-0003e9 9b32                      	SBIS	PINC, PC2	//verificar el botón de modo
-0003ea 9543                      	INC		MODO		//si fue presionado incrementar el modo
+00039c 9b32                      	SBIS	PINC, PC2	//verificar el botón de modo
+00039d 9543                      	INC		MODO		//si fue presionado incrementar el modo
                                  
                                  	//Chequear el límite de modos 
-0003eb e009                      	LDI		R16, MODOS	
-0003ec 1340                      	CPSE	MODO, R16	//comparar el modo con el límite
-0003ed c001                      	RJMP	PC+2		// si no llega al límite se chequea en qué modo nos encntramos
-0003ee 2744                      	CLR		MODO		//si llega al límite, se reinicia
+00039e e009                      	LDI		R16, MODOS	
+00039f 1340                      	CPSE	MODO, R16	//comparar el modo con el límite
+0003a0 c001                      	RJMP	PC+2		// si no llega al límite se chequea en qué modo nos encntramos
+0003a1 2744                      	CLR		MODO		//si llega al límite, se reinicia
                                  
                                  	//Chequear en qué modo estamos 
-0003ef 3040                      	CPI		MODO, 0		//si el modo es igual a 0
-0003f0 f0d1                      	BREQ	MOST_HORA1	//activa la bandera para mostrar hora
-0003f1 c032                      	RJMP	SALIDA_PDINT
+0003a2 3040                      	CPI		MODO, 0		//si el modo es igual a 0
+0003a3 f0d1                      	BREQ	MOST_HORA1	//activa la bandera para mostrar hora
+0003a4 c032                      	RJMP	SALIDA_PDINT
                                  
-0003f2 3041                      	CPI		MODO, 1		//si el modo es igual a 1
-0003f3 f0c1                      	BREQ	CONF_MIN1	//activa la bandera para configurar los minutos
-0003f4 c02f                      	RJMP	SALIDA_PDINT
+0003a5 3041                      	CPI		MODO, 1		//si el modo es igual a 1
+0003a6 f0c1                      	BREQ	CONF_MIN1	//activa la bandera para configurar los minutos
+0003a7 c02f                      	RJMP	SALIDA_PDINT
                                  
-0003f5 3042                      	CPI		MODO, 2		//si el modo es igua a 2
-0003f6 f0c1                      	BREQ	CONF_HORA1	//activa la bandera para configurar la hora
-0003f7 c02c                      	RJMP	SALIDA_PDINT
+0003a8 3042                      	CPI		MODO, 2		//si el modo es igua a 2
+0003a9 f0c1                      	BREQ	CONF_HORA1	//activa la bandera para configurar la hora
+0003aa c02c                      	RJMP	SALIDA_PDINT
                                  
-0003f8 3043                      	CPI		MODO, 3		//si el modo es igua a 3
-0003f9 f0c1                      	BREQ	MOST_FECHA1	//activa la bandera para mostrar la fecha
-0003fa c029                      	RJMP	SALIDA_PDINT
+0003ab 3043                      	CPI		MODO, 3		//si el modo es igua a 3
+0003ac f0c1                      	BREQ	MOST_FECHA1	//activa la bandera para mostrar la fecha
+0003ad c029                      	RJMP	SALIDA_PDINT
                                  	
-0003fb 3044                      	CPI		MODO, 4
-0003fc f0c1                      	BREQ	CONF_MESES1
-0003fd c026                      	RJMP	SALIDA_PDINT
+0003ae 3044                      	CPI		MODO, 4
+0003af f0c1                      	BREQ	CONF_MESES1
+0003b0 c026                      	RJMP	SALIDA_PDINT
                                  
-0003fe 3045                      	CPI		MODO, 5
-0003ff f0c1                      	BREQ	CONF_DIAS1
-000400 c023                      	RJMP	SALIDA_PDINT
+0003b1 3045                      	CPI		MODO, 5
+0003b2 f0c1                      	BREQ	CONF_DIAS1
+0003b3 c023                      	RJMP	SALIDA_PDINT
                                  
-000401 3046                      	CPI		MODO, 6
-000402 f0c1                      	BREQ	ALARMA1
-000403 c020                      	RJMP	SALIDA_PDINT
+0003b4 3046                      	CPI		MODO, 6
+0003b5 f0c1                      	BREQ	ALARMA1
+0003b6 c020                      	RJMP	SALIDA_PDINT
                                  
-000404 3047                      	CPI		MODO, 7
-000405 f0c1                      	BREQ	CONF_ALARMA_MIN1
-000406 c01d                      	RJMP	SALIDA_PDINT
+0003b7 3047                      	CPI		MODO, 7
+0003b8 f0c1                      	BREQ	CONF_ALARMA_MIN1
+0003b9 c01d                      	RJMP	SALIDA_PDINT
                                  
-000407 3048                      	CPI		MODO, 8
-000408 f0c1                      	BREQ	CONF_ALARMA_HORA1
-000409 c01a                      	RJMP	SALIDA_PDINT
+0003ba 3048                      	CPI		MODO, 8
+0003bb f0c1                      	BREQ	CONF_ALARMA_HORA1
+0003bc c01a                      	RJMP	SALIDA_PDINT
                                  
-00040a f4c9                      	BRNE      SALIDA_PDINT
+0003bd f4c9                      	BRNE      SALIDA_PDINT
                                  
                                  MOST_HORA1:
-00040b c018                      	RJMP	SALIDA_PDINT	//activa la bandera en la interrupción del timer
+0003be c018                      	RJMP	SALIDA_PDINT	//activa la bandera en la interrupción del timer
                                  
                                  CONF_MIN1:	
-00040c 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo	
-00040d e051                      	LDI		ACCION, 0x01	//encender bandera
-00040e c015                      	RJMP	SALIDA_PDINT
+0003bf 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo	
+0003c0 e051                      	LDI		ACCION, 0x01	//encender bandera
+0003c1 c015                      	RJMP	SALIDA_PDINT
                                  
                                  CONF_HORA1:
-00040f 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-000410 e051                      	LDI		ACCION, 0x01	//encender bandera
-000411 c012                      	RJMP	SALIDA_PDINT
+0003c2 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003c3 e051                      	LDI		ACCION, 0x01	//encender bandera
+0003c4 c012                      	RJMP	SALIDA_PDINT
                                  
                                  MOST_FECHA1:
-000412 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-000413 e051                      	LDI		ACCION, 0x01	//encender bandera
-000414 c00f                      	RJMP	SALIDA_PDINT
+0003c5 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003c6 e051                      	LDI		ACCION, 0x01	//encender bandera
+0003c7 c00f                      	RJMP	SALIDA_PDINT
                                  
                                  CONF_MESES1:
-000415 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-000416 e051                      	LDI		ACCION, 0x01	//encender bandera
-000417 c00c                      	RJMP	SALIDA_PDINT
+0003c8 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003c9 e051                      	LDI		ACCION, 0x01	//encender bandera
+0003ca c00c                      	RJMP	SALIDA_PDINT
                                  
                                  CONF_DIAS1:
-000418 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-000419 e051                      	LDI		ACCION, 0x01	//encender bandera
-00041a c009                      	RJMP	SALIDA_PDINT
+0003cb 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003cc e051                      	LDI		ACCION, 0x01	//encender bandera
+0003cd c009                      	RJMP	SALIDA_PDINT
                                  
                                  ALARMA1:
-00041b 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-00041c e051                      	LDI		ACCION, 0x01	//encender bandera
-00041d c006                      	RJMP	SALIDA_PDINT
+0003ce 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003cf e051                      	LDI		ACCION, 0x01	//encender bandera
+0003d0 c006                      	RJMP	SALIDA_PDINT
                                  
                                  CONF_ALARMA_MIN1:
-00041e 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-00041f e051                      	LDI		ACCION, 0x01	//encender bandera
-000420 c003                      	RJMP	SALIDA_PDINT
+0003d1 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003d2 e051                      	LDI		ACCION, 0x01	//encender bandera
+0003d3 c003                      	RJMP	SALIDA_PDINT
                                  
                                  CONF_ALARMA_HORA1:
-000421 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
-000422 e051                      	LDI		ACCION, 0x01	//encender bandera
-000423 c000                      	RJMP	SALIDA_PDINT
+0003d4 9b32                      	SBIS	PINC, PC2		//Si se presionó el botón de modo
+0003d5 e051                      	LDI		ACCION, 0x01	//encender bandera
+0003d6 c000                      	RJMP	SALIDA_PDINT
                                  
                                  SALIDA_PDINT:
-000424 910f                      	POP		R16
-000425 bf0f                      	OUT		SREG, R16
-000426 910f                      	POP		R16
-000427 9518                      	RETI					//Regesar
+0003d7 910f                      	POP		R16
+0003d8 bf0f                      	OUT		SREG, R16
+0003d9 910f                      	POP		R16
+0003da 9518                      	RETI					//Regesar
                                  
                                  //*************Iterrupción del timer 1************
                                  TIMER1_INTERRUPT:
-000428 930f                      	PUSH	R16
-000429 b70f                      	IN		R16, SREG
-00042a 930f                      	PUSH	R16
+0003db 930f                      	PUSH	R16
+0003dc b70f                      	IN		R16, SREG
+0003dd 930f                      	PUSH	R16
                                  
                                  
                                  	// Cargar TCNT1 con valor inicial
-00042b ee01                      	LDI		R16, HIGH(T1VALUE)
-00042c 9300 0085                 	STS		TCNT1H, R16
-00042e e70b                      	LDI		R16, LOW(T1VALUE)
-00042f 9300 0084                 	STS		TCNT1L, R16
+0003de ec02                      	LDI		R16, HIGH(T1VALUE)
+0003df 9300 0085                 	STS		TCNT1H, R16
+0003e1 ef07                      	LDI		R16, LOW(T1VALUE)
+0003e2 9300 0084                 	STS		TCNT1L, R16
                                  
-                                 /*	INC		COUNTER
+                                 	/*INC		COUNTER
                                  	CPI		COUNTER, 60
                                  	BRNE	SALIDA_PDINT_ISR
                                  	CLR		COUNTER*/
-                                 
-                                 
                                  	//Chequear si se encuentre en modo 0 o 1
-000431 3040                      	CPI		MODO, 0		//si está en modo 0
-000432 e051                      	LDI		ACCION, 0x01	//activar bandera cada segundo
+0003e4 3040                      	CPI		MODO, 0		//si está en modo 0
+0003e5 e051                      	LDI		ACCION, 0x01	//activar bandera cada segundo
+                                 
+0003e6 30b1                      	CPI		R27, 0x01
+0003e7 f549                      	BRNE	SALIDA_PDINT_ISR
+0003e8 9100 010b                 	LDS		R16, CONT_UMIN_ALARMA
+0003ea 9110 0100                 	LDS		R17, CONT_UMIN
+0003ec 1701                      	CP		R16, R17
+0003ed f519                      	BRNE	SALIDA_PDINT_ISR
+0003ee 9300 010b                 	STS		CONT_UMIN_ALARMA, R16
+0003f0 9310 0100                 	STS		CONT_UMIN, R17
+                                 
+0003f2 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA
+0003f4 9110 0101                 	LDS		R17, CONT_DMIN
+0003f6 1701                      	CP		R16, R17
+0003f7 f4c9                      	BRNE	SALIDA_PDINT_ISR
+0003f8 9300 010c                 	STS		CONT_DMIN_ALARMA, R16
+0003fa 9310 0101                 	STS		CONT_DMIN, R17
+                                 
+0003fc 9100 010d                 	LDS		R16, CONT_UHORA_ALARMA
+0003fe 9110 0102                 	LDS		R17, CONT_UHORA
+000400 1701                      	CP		R16, R17
+000401 f479                      	BRNE	SALIDA_PDINT_ISR
+000402 9300 010d                 	STS		CONT_UHORA_ALARMA, R16
+000404 9310 0102                 	STS		CONT_UHORA, R17
+                                 
+000406 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA
+000408 9110 0103                 	LDS		R17, CONT_DHORA
+00040a 1701                      	CP		R16, R17
+00040b f429                      	BRNE	SALIDA_PDINT_ISR
+00040c 9300 010e                 	STS		CONT_DHORA_ALARMA, R16
+00040e 9310 0103                 	STS		CONT_DHORA, R17
+                                 
+000410 9a2a                      	SBI		PORTB, PB2
                                  
                                  	/*CPI		MODO, 1			//si está en modo 1
                                  	CALL	LED_CONF_MIN	//llama a la función de titilar led cada seg.
                                  	CPI		MODO, 4			//si está en modo configurar la fecha
                                  	CALL	LED_CONF_FECHA*/
-000433 f401                      	BRNE      SALIDA_PDINT_ISR
                                  
                                  SALIDA_PDINT_ISR:
-000434 910f                      	POP		R16
-000435 bf0f                      	OUT		SREG, R16
-000436 910f                      	POP		R16
-000437 9518                      	RETI
+000411 910f                      	POP		R16
+000412 bf0f                      	OUT		SREG, R16
+000413 910f                      	POP		R16
+000414 9518                      	RETI
                                  
                                  /**********Inteerrupción del timer 0************/
                                  TIMER0_INTERRUPT:
-000438 930f                      	PUSH	R16
-000439 b70f                      	IN		R16, SREG
-00043a 930f                      	PUSH	R16
+000415 930f                      	PUSH	R16
+000416 b70f                      	IN		R16, SREG
+000417 930f                      	PUSH	R16
                                  	
-00043b eb01                      	LDI		R16, T0Value
-00043c bd06                      	OUT		TCNT0, R16			// Carga TCNT0
+000418 eb01                      	LDI		R16, T0Value
+000419 bd06                      	OUT		TCNT0, R16			// Carga TCNT0
                                  
-00043d 940e 0162                 	CALL	TITILAR_LEDS
+00041a 940e 0162                 	CALL	TITILAR_LEDS
                                  
                                  	//multiplexeado de displays
                                  	//Apagar todos los displays
-00043f 982c                      	CBI		PORTB, 4
-000440 982d                      	CBI		PORTB, 5
-000441 9843                      	CBI		PORTC, 3
-000442 9844                      	CBI		PORTC, 4		//Se apagan todos los displays al inicio
+00041c 982c                      	CBI		PORTB, 4
+00041d 982d                      	CBI		PORTB, 5
+00041e 9843                      	CBI		PORTC, 3
+00041f 9844                      	CBI		PORTC, 4		//Se apagan todos los displays al inicio
                                  
-000443 3040                      	CPI		MODO, 0
-000444 f0a1                      	BREQ	MULTIPLEXH
-000445 3041                      	CPI		MODO, 1
-000446 f091                      	BREQ	MULTIPLEXH
-000447 3042                      	CPI		MODO, 2		
-000448 f081                      	BREQ	MULTIPLEXH		
-000449 3043                      	CPI		MODO, 3
-00044a f179                      	BREQ	MULTIPLEXF
-00044b 3044                      	CPI		MODO, 4
-00044c f169                      	BREQ	MULTIPLEXF
-00044d 3045                      	CPI		MODO, 5
-00044e f159                      	BREQ	MULTIPLEXF
-00044f 3046                      	CPI		MODO, 6
-000450 f029                      	BREQ	LLAMAR_MULTIPLEX_ALARMA
-000451 3047                      	CPI		MODO, 7
-000452 f019                      	BREQ	LLAMAR_MULTIPLEX_ALARMA
-000453 3048                      	CPI		MODO, 8
-000454 f009                      	BREQ	LLAMAR_MULTIPLEX_ALARMA
-000455 c067                      	RJMP	FIN_ISR
+000420 3040                      	CPI		MODO, 0
+000421 f0a1                      	BREQ	MULTIPLEXH
+000422 3041                      	CPI		MODO, 1
+000423 f091                      	BREQ	MULTIPLEXH
+000424 3042                      	CPI		MODO, 2		
+000425 f081                      	BREQ	MULTIPLEXH		
+000426 3043                      	CPI		MODO, 3
+000427 f179                      	BREQ	MULTIPLEXF
+000428 3044                      	CPI		MODO, 4
+000429 f169                      	BREQ	MULTIPLEXF
+00042a 3045                      	CPI		MODO, 5
+00042b f159                      	BREQ	MULTIPLEXF
+00042c 3046                      	CPI		MODO, 6
+00042d f029                      	BREQ	LLAMAR_MULTIPLEX_ALARMA
+00042e 3047                      	CPI		MODO, 7
+00042f f019                      	BREQ	LLAMAR_MULTIPLEX_ALARMA
+000430 3048                      	CPI		MODO, 8
+000431 f009                      	BREQ	LLAMAR_MULTIPLEX_ALARMA
+000432 c067                      	RJMP	FIN_ISR
                                  
                                  LLAMAR_MULTIPLEX_ALARMA:
-000456 940e 049b                 	CALL	MULTIPLEX_ALARMA
-000458 c064                      	RJMP	FIN_ISR
+000433 940e 0478                 	CALL	MULTIPLEX_ALARMA
+000435 c064                      	RJMP	FIN_ISR
                                  
                                  MULTIPLEXH:
                                  	//Seleccionar qué bit encender según el valor del contador
-000459 3060                      	CPI		CONTADOR_T0,0
-00045a f039                      	BREQ	ENCENDER_C4H
-00045b 3061                      	CPI		CONTADOR_T0,1
-00045c f059                      	BREQ	ENCENDER_C3H
-00045d 3062                      	CPI		CONTADOR_T0,2
-00045e f079                      	BREQ	ENCENDER_B5H
-00045f 3063                      	CPI		CONTADOR_T0,3
-000460 f099                      	BREQ	ENCENDER_B4H
-000461 c05b                      	RJMP	FIN_ISR
+000436 3060                      	CPI		CONTADOR_T0,0
+000437 f039                      	BREQ	ENCENDER_C4H
+000438 3061                      	CPI		CONTADOR_T0,1
+000439 f059                      	BREQ	ENCENDER_C3H
+00043a 3062                      	CPI		CONTADOR_T0,2
+00043b f079                      	BREQ	ENCENDER_B5H
+00043c 3063                      	CPI		CONTADOR_T0,3
+00043d f099                      	BREQ	ENCENDER_B4H
+00043e c05b                      	RJMP	FIN_ISR
                                  
                                  ENCENDER_C4H:
-000462 9100 0100                 	LDS		R16, CONT_UMIN	//Enviar el dato al display
-000464 940e 00d2                 	CALL	MOST_UMIN
-000466 9a44                      	SBI		PORTC, 4		//Encender el transistor del display(U_MIN)
-000467 c055                      	RJMP	FIN_ISR
+00043f 9100 0100                 	LDS		R16, CONT_UMIN	//Enviar el dato al display
+000441 940e 00d2                 	CALL	MOST_UMIN
+000443 9a44                      	SBI		PORTC, 4		//Encender el transistor del display(U_MIN)
+000444 c055                      	RJMP	FIN_ISR
                                  	
                                  ENCENDER_C3H:
-000468 9100 0101                 	LDS		R16, CONT_DMIN	//Enviar el dato al display
-00046a 940e 00de                 	CALL	MOST_DMIN
-00046c 9a43                      	SBI		PORTC, 3		//Encender el transistor del display(D_MIN)
-00046d c04f                      	RJMP	FIN_ISR
+000445 9100 0101                 	LDS		R16, CONT_DMIN	//Enviar el dato al display
+000447 940e 00de                 	CALL	MOST_DMIN
+000449 9a43                      	SBI		PORTC, 3		//Encender el transistor del display(D_MIN)
+00044a c04f                      	RJMP	FIN_ISR
                                  	
                                  ENCENDER_B5H:
-00046e 9100 0102                 	LDS		R16, CONT_UHORA
-000470 940e 00ea                 	CALL	MOST_UHORA
-000472 9a2d                      	SBI		PORTB, 5
-000473 c049                      	RJMP	FIN_ISR
+00044b 9100 0102                 	LDS		R16, CONT_UHORA
+00044d 940e 00ea                 	CALL	MOST_UHORA
+00044f 9a2d                      	SBI		PORTB, 5
+000450 c049                      	RJMP	FIN_ISR
                                  
                                  ENCENDER_B4H:
-000474 9100 0103                 	LDS		R16, CONT_DHORA
-000476 940e 00f6                 	CALL	MOST_DHORA
-000478 9a2c                      	SBI		PORTB, 4
-000479 c043                      	RJMP	FIN_ISR
+000451 9100 0103                 	LDS		R16, CONT_DHORA
+000453 940e 00f6                 	CALL	MOST_DHORA
+000455 9a2c                      	SBI		PORTB, 4
+000456 c043                      	RJMP	FIN_ISR
                                  
                                  
                                  MULTIPLEXF:
-00047a 3060                      	CPI		CONTADOR_T0,0
-00047b f039                      	BREQ	ENCENDER_C4F
-00047c 3061                      	CPI		CONTADOR_T0,1
-00047d f059                      	BREQ	ENCENDER_C3F
-00047e 3062                      	CPI		CONTADOR_T0,2
-00047f f079                      	BREQ	ENCENDER_B5F
-000480 3063                      	CPI		CONTADOR_T0,3
-000481 f099                      	BREQ	ENCENDER_B4F
-000482 c03a                      	RJMP	FIN_ISR
+000457 3060                      	CPI		CONTADOR_T0,0
+000458 f039                      	BREQ	ENCENDER_C4F
+000459 3061                      	CPI		CONTADOR_T0,1
+00045a f059                      	BREQ	ENCENDER_C3F
+00045b 3062                      	CPI		CONTADOR_T0,2
+00045c f079                      	BREQ	ENCENDER_B5F
+00045d 3063                      	CPI		CONTADOR_T0,3
+00045e f099                      	BREQ	ENCENDER_B4F
+00045f c03a                      	RJMP	FIN_ISR
                                  
                                  ENCENDER_C4F:
-000483 9100 0106                 	LDS		R16, CONT_UMES	//Enviar el dato al display
-000485 940e 011a                 	CALL	MOST_UMES
-000487 9a44                      	SBI		PORTC, 4		//Encender el transistor del display(U_MIN)
-000488 c034                      	RJMP	FIN_ISR
+000460 9100 0106                 	LDS		R16, CONT_UMES	//Enviar el dato al display
+000462 940e 011a                 	CALL	MOST_UMES
+000464 9a44                      	SBI		PORTC, 4		//Encender el transistor del display(U_MIN)
+000465 c034                      	RJMP	FIN_ISR
                                  	
                                  ENCENDER_C3F:
-000489 9100 0107                 	LDS		R16, CONT_DMES	//Enviar el dato al display
-00048b 940e 0126                 	CALL	MOST_DMES
-00048d 9a43                      	SBI		PORTC, 3		//Encender el transistor del display(D_MIN)
-00048e c02e                      	RJMP	FIN_ISR
+000466 9100 0107                 	LDS		R16, CONT_DMES	//Enviar el dato al display
+000468 940e 0126                 	CALL	MOST_DMES
+00046a 9a43                      	SBI		PORTC, 3		//Encender el transistor del display(D_MIN)
+00046b c02e                      	RJMP	FIN_ISR
                                  	
                                  ENCENDER_B5F:
-00048f 9100 0104                 	LDS		R16, CONT_UDIA
-000491 940e 0102                 	CALL	MOST_UDIA
-000493 9a2d                      	SBI		PORTB, 5
-000494 c028                      	RJMP	FIN_ISR
+00046c 9100 0104                 	LDS		R16, CONT_UDIA
+00046e 940e 0102                 	CALL	MOST_UDIA
+000470 9a2d                      	SBI		PORTB, 5
+000471 c028                      	RJMP	FIN_ISR
                                  
                                  ENCENDER_B4F:
-000495 9100 0105                 	LDS		R16, CONT_DDIA
-000497 940e 010e                 	CALL	MOST_DDIA
-000499 9a2c                      	SBI		PORTB, 4
-00049a c022                      	RJMP	FIN_ISR
+000472 9100 0105                 	LDS		R16, CONT_DDIA
+000474 940e 010e                 	CALL	MOST_DDIA
+000476 9a2c                      	SBI		PORTB, 4
+000477 c022                      	RJMP	FIN_ISR
                                  
                                  MULTIPLEX_ALARMA:
-00049b 3060                      	CPI		CONTADOR_T0,0
-00049c f039                      	BREQ	ENCENDER_C4AL
-00049d 3061                      	CPI		CONTADOR_T0,1
-00049e f059                      	BREQ	ENCENDER_C3AL
-00049f 3062                      	CPI		CONTADOR_T0,2
-0004a0 f079                      	BREQ	ENCENDER_B5AL
-0004a1 3063                      	CPI		CONTADOR_T0,3
-0004a2 f099                      	BREQ	ENCENDER_B4AL
-0004a3 c018                      	RJMP	SALIR_MULTIPLEX_ALARMA
+000478 3060                      	CPI		CONTADOR_T0,0
+000479 f039                      	BREQ	ENCENDER_C4AL
+00047a 3061                      	CPI		CONTADOR_T0,1
+00047b f059                      	BREQ	ENCENDER_C3AL
+00047c 3062                      	CPI		CONTADOR_T0,2
+00047d f079                      	BREQ	ENCENDER_B5AL
+00047e 3063                      	CPI		CONTADOR_T0,3
+00047f f099                      	BREQ	ENCENDER_B4AL
+000480 c018                      	RJMP	SALIR_MULTIPLEX_ALARMA
                                  
                                  ENCENDER_C4AL:
-0004a4 9100 010b                 	LDS		R16, CONT_UMIN_ALARMA	//Enviar el dato al display
-0004a6 940e 0132                 	CALL	MOST_UMIN_ALARMA
-0004a8 9a44                      	SBI		PORTC, 4		//Encender el transistor del display(U_MIN)
-0004a9 c012                      	RJMP	SALIR_MULTIPLEX_ALARMA
+000481 9100 010b                 	LDS		R16, CONT_UMIN_ALARMA	//Enviar el dato al display
+000483 940e 0132                 	CALL	MOST_UMIN_ALARMA
+000485 9a44                      	SBI		PORTC, 4		//Encender el transistor del display(U_MIN)
+000486 c012                      	RJMP	SALIR_MULTIPLEX_ALARMA
                                  	
                                  ENCENDER_C3AL:
-0004aa 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA	//Enviar el dato al display
-0004ac 940e 013e                 	CALL	MOST_DMIN_ALARMA
-0004ae 9a43                      	SBI		PORTC, 3		//Encender el transistor del display(D_MIN)
-0004af c00c                      	RJMP	SALIR_MULTIPLEX_ALARMA
+000487 9100 010c                 	LDS		R16, CONT_DMIN_ALARMA	//Enviar el dato al display
+000489 940e 013e                 	CALL	MOST_DMIN_ALARMA
+00048b 9a43                      	SBI		PORTC, 3		//Encender el transistor del display(D_MIN)
+00048c c00c                      	RJMP	SALIR_MULTIPLEX_ALARMA
                                  	
                                  ENCENDER_B5AL:
-0004b0 9100 010d                 	LDS		R16, CONT_UHORA_ALARMA
-0004b2 940e 014a                 	CALL	MOST_UHORA_ALARMA
-0004b4 9a2d                      	SBI		PORTB, 5
-0004b5 c006                      	RJMP	SALIR_MULTIPLEX_ALARMA
+00048d 9100 010d                 	LDS		R16, CONT_UHORA_ALARMA
+00048f 940e 014a                 	CALL	MOST_UHORA_ALARMA
+000491 9a2d                      	SBI		PORTB, 5
+000492 c006                      	RJMP	SALIR_MULTIPLEX_ALARMA
                                  
                                  ENCENDER_B4AL:
-0004b6 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA
-0004b8 940e 0156                 	CALL	MOST_DHORA_ALARMA
-0004ba 9a2c                      	SBI		PORTB, 4
-0004bb c000                      	RJMP	SALIR_MULTIPLEX_ALARMA
+000493 9100 010e                 	LDS		R16, CONT_DHORA_ALARMA
+000495 940e 0156                 	CALL	MOST_DHORA_ALARMA
+000497 9a2c                      	SBI		PORTB, 4
+000498 c000                      	RJMP	SALIR_MULTIPLEX_ALARMA
                                  
                                  SALIR_MULTIPLEX_ALARMA:
-0004bc 9508                      RET
+000499 9508                      RET
                                  
                                  	
                                  FIN_ISR:
-0004bd 9563                      	INC		CONTADOR_T0
-0004be 7063                      	ANDI	CONTADOR_T0, 0x03	//Solo cuente de 0 a 3
-0004bf 910f                      	POP		R16
-0004c0 bf0f                      	OUT		SREG, R16
-0004c1 910f                      	POP		R16
-0004c2 9518                      	RETI
+00049a 9563                      	INC		CONTADOR_T0
+00049b 7063                      	ANDI	CONTADOR_T0, 0x03	//Solo cuente de 0 a 3
+00049c 910f                      	POP		R16
+00049d bf0f                      	OUT		SREG, R16
+00049e 910f                      	POP		R16
+00049f 9518                      	RETI
                                  	
                                  TABLA:
                                  //Tabla de conversión de numeros de 0 al 9
-0004c3 063f
-0004c4 4f5b
-0004c5 6d66
-0004c6 077d
-0004c7 677f                          .DB 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67
+0004a0 063f
+0004a1 4f5b
+0004a2 6d66
+0004a3 077d
+0004a4 677f                          .DB 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x67
                                  DIAS_MESES:	
                                  //Tabla de la cantidad de días en los meses del año
-0004c8 1c1f
-0004c9 1e1f
-0004ca 1e1f
-0004cb 1f1f
-0004cc 1f1e
+0004a5 1c1f
+0004a6 1e1f
+0004a7 1e1f
+0004a8 1f1f
+0004a9 1f1e
 
 
 RESOURCE USE INFORMATION
@@ -2555,37 +2511,37 @@ counted separately from r26..r31 here.
 "ATmega328P" register use summary:
 x  :   0 y  :   0 z  :  13 r0 :   0 r1 :  13 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16: 300 r17: 143 r18:  16 r19:   0 r20:  32 
-r21:  26 r22:  15 r23:   0 r24:   1 r25:   8 r26:  11 r27:   0 r28:   0 
+r13:   0 r14:   0 r15:   0 r16: 289 r17: 139 r18:  16 r19:   0 r20:  32 
+r21:  26 r22:  15 r23:   0 r24:   1 r25:   8 r26:  11 r27:   3 r28:   0 
 r29:   0 r30:  26 r31:  26 
-Registers used: 13 out of 35 (37.1%)
+Registers used: 14 out of 35 (40.0%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :  13 add   :  13 adiw  :   0 and   :   0 
 andi  :  13 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :  53 brge  :   0 brhc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :  52 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
 brne  :  45 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
-brvs  :   0 bset  :   0 bst   :   0 call  :  56 cbi   :  31 cbr   :   0 
+brvs  :   0 bset  :   0 bst   :   0 call  :  54 cbi   :  31 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   1 cln   :   0 clr   :  27 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   6 cpc   :   0 
 cpi   :  91 cpse  :   1 dec   :  14 eor   :   1 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :  16 inc   :  24 jmp   :   0 
-ld    :   0 ldd   :   0 ldi   :  99 lds   :  68 lpm   :  26 lsl   :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :  16 inc   :  23 jmp   :   0 
+ld    :   0 ldd   :   0 ldi   : 100 lds   :  67 lpm   :  26 lsl   :   0 
 lsr   :   0 mov   :   5 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :  12 ori   :   0 out   :  25 pop   :   6 
-push  :   6 rcall :   0 ret   :  37 reti  :   3 rjmp  : 108 rol   :   0 
-ror   :   0 sbc   :   0 sbci  :   0 sbi   :  29 sbic  :   0 sbis  :  23 
+push  :   6 rcall :   0 ret   :  37 reti  :   3 rjmp  : 103 rol   :   0 
+ror   :   0 sbc   :   0 sbci  :   0 sbi   :  29 sbic  :   0 sbis  :  22 
 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
 sei   :   1 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   0 st    :   0 std   :   0 sts   : 113 
+sez   :   0 sleep :   0 spm   :   0 st    :   0 std   :   0 sts   : 102 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 Instructions used: 31 out of 113 (27.4%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x00099c   2380     22   2402   32768   7.3%
+[.cseg] 0x000000 0x000956   2310     22   2332   32768   7.1%
 [.dseg] 0x000100 0x000110      0     16     16    2048   0.8%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 

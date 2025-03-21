@@ -40,9 +40,9 @@
   <CONT_DHORA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>38</LINE></CONT_DHORA_ALARMA>
   <INDICADOR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>39</LINE></INDICADOR_ALARMA>
   <SETUP><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>55</LINE></SETUP>
-  <PCINT_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1195</LINE></PCINT_ISR>
-  <TIMER1_INTERRUPT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1299</LINE></TIMER1_INTERRUPT>
-  <TIMER0_INTERRUPT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1334</LINE></TIMER0_INTERRUPT>
+  <PCINT_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1122</LINE></PCINT_ISR>
+  <TIMER1_INTERRUPT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1226</LINE></TIMER1_INTERRUPT>
+  <TIMER0_INTERRUPT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1290</LINE></TIMER0_INTERRUPT>
   <INIT_TMR1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>230</LINE></INIT_TMR1>
   <INIT_TMR0><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>241</LINE></INIT_TMR0>
   <MOST_UMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>249</LINE></MOST_UMIN>
@@ -74,9 +74,9 @@
   <MOST_FECHA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>646</LINE></MOST_FECHA>
   <CONF_DIAS><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>801</LINE></CONF_DIAS>
   <ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>936</LINE></ALARMA>
-  <CONF_ALARMA_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1041</LINE></CONF_ALARMA_MIN>
-  <CONF_HORAA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1113</LINE></CONF_HORAA_ALARMA>
-  <TABLA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1494</LINE></TABLA>
+  <CONF_ALARMA_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>965</LINE></CONF_ALARMA_MIN>
+  <CONF_HORAA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1039</LINE></CONF_HORAA_ALARMA>
+  <TABLA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1450</LINE></TABLA>
   <TITILAR_LEDS><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>407</LINE></TITILAR_LEDS>
   <SALIR_TITILAR_DP><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>420</LINE></SALIR_TITILAR_DP>
   <SALTO_LEJOS><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>425</LINE></SALTO_LEJOS>
@@ -108,7 +108,7 @@
   <GUARDAR_UMAX_AUT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>686</LINE></GUARDAR_UMAX_AUT>
   <SALIDAF><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>690</LINE></SALIDAF>
   <INC_MES><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>724</LINE></INC_MES>
-  <DIAS_MESES><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1497</LINE></DIAS_MESES>
+  <DIAS_MESES><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1453</LINE></DIAS_MESES>
   <SALIDA_CONF_MESES><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>797</LINE></SALIDA_CONF_MESES>
   <DEC_MES><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>761</LINE></DEC_MES>
   <REVISAR_LIMITE12F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>750</LINE></REVISAR_LIMITE12F>
@@ -133,62 +133,55 @@
   <SALIDA_CONF_DIA_DEC><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>930</LINE></SALIDA_CONF_DIA_DEC>
   <RESTARU_DIA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>921</LINE></RESTARU_DIA>
   <GUARDAR_DEC_DIA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>926</LINE></GUARDAR_DEC_DIA>
-  <LLAMAR_SALIR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>959</LINE></LLAMAR_SALIR_ALARMA>
-  <INC_CONT_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>949</LINE></INC_CONT_ALARMA>
-  <ACTIVAR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>963</LINE></ACTIVAR_ALARMA>
-  <SALIR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1038</LINE></SALIR_ALARMA>
-  <SALIR_ACT_UMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1018</LINE></SALIR_ACT_UMIN>
-  <SALIR_ACT_DMIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1023</LINE></SALIR_ACT_DMIN>
-  <SALIR_ACT_UHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1028</LINE></SALIR_ACT_UHORA>
-  <SALIR_ACT_DHORA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1033</LINE></SALIR_ACT_DHORA>
-  <ESPERAR_DESACTIVACION><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>997</LINE></ESPERAR_DESACTIVACION>
-  <APAGAR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1001</LINE></APAGAR>
-  <SALIDA_CONF_MALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1110</LINE></SALIDA_CONF_MALARMA>
-  <INC_CONT_ALARMA_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1057</LINE></INC_CONT_ALARMA_MIN>
-  <DEC_CONT_ALARMA_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1075</LINE></DEC_CONT_ALARMA_MIN>
-  <CONTINUA_U_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1099</LINE></CONTINUA_U_ALARMA>
-  <CONTINUA_D_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1103</LINE></CONTINUA_D_ALARMA>
-  <UNDERFLOW_UMIN_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1083</LINE></UNDERFLOW_UMIN_ALARMA>
-  <SALIDA_CONF_MIN_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1107</LINE></SALIDA_CONF_MIN_ALARMA>
-  <UNDERFLOW_DMIN_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1095</LINE></UNDERFLOW_DMIN_ALARMA>
-  <SALIDA_CONF_HORAA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1188</LINE></SALIDA_CONF_HORAA_ALARMA>
-  <INC_CONT2_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1127</LINE></INC_CONT2_ALARMA>
-  <DEC_CONT2_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1158</LINE></DEC_CONT2_ALARMA>
-  <REVISAR_LIMITE24_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1146</LINE></REVISAR_LIMITE24_ALARMA>
-  <GUARDAR_CICLO2_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1141</LINE></GUARDAR_CICLO2_ALARMA>
-  <SALIDA_CONF_HORA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1155</LINE></SALIDA_CONF_HORA_ALARMA>
-  <DEC_UNIDADES_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1169</LINE></DEC_UNIDADES_ALARMA>
-  <GUARDAR_DEC_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1181</LINE></GUARDAR_DEC_ALARMA>
-  <RESTARU_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1176</LINE></RESTARU_ALARMA>
-  <SALIDA_CONF_HORA_ALARMA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1185</LINE></SALIDA_CONF_HORA_ALARMA1>
-  <MOST_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1249</LINE></MOST_HORA1>
-  <SALIDA_PDINT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1292</LINE></SALIDA_PDINT>
-  <CONF_MIN1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1252</LINE></CONF_MIN1>
-  <CONF_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1257</LINE></CONF_HORA1>
-  <MOST_FECHA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1262</LINE></MOST_FECHA1>
-  <CONF_MESES1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1267</LINE></CONF_MESES1>
-  <CONF_DIAS1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1272</LINE></CONF_DIAS1>
-  <ALARMA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1277</LINE></ALARMA1>
-  <CONF_ALARMA_MIN1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1282</LINE></CONF_ALARMA_MIN1>
-  <CONF_ALARMA_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1287</LINE></CONF_ALARMA_HORA1>
-  <SALIDA_PDINT_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1327</LINE></SALIDA_PDINT_ISR>
-  <MULTIPLEXH><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1375</LINE></MULTIPLEXH>
-  <MULTIPLEXF><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1412</LINE></MULTIPLEXF>
-  <LLAMAR_MULTIPLEX_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1371</LINE></LLAMAR_MULTIPLEX_ALARMA>
-  <FIN_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1486</LINE></FIN_ISR>
-  <MULTIPLEX_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1447</LINE></MULTIPLEX_ALARMA>
-  <ENCENDER_C4H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1387</LINE></ENCENDER_C4H>
-  <ENCENDER_C3H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1393</LINE></ENCENDER_C3H>
-  <ENCENDER_B5H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1399</LINE></ENCENDER_B5H>
-  <ENCENDER_B4H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1405</LINE></ENCENDER_B4H>
-  <ENCENDER_C4F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1423</LINE></ENCENDER_C4F>
-  <ENCENDER_C3F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1429</LINE></ENCENDER_C3F>
-  <ENCENDER_B5F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1435</LINE></ENCENDER_B5F>
-  <ENCENDER_B4F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1441</LINE></ENCENDER_B4F>
-  <ENCENDER_C4AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1458</LINE></ENCENDER_C4AL>
-  <ENCENDER_C3AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1464</LINE></ENCENDER_C3AL>
-  <ENCENDER_B5AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1470</LINE></ENCENDER_B5AL>
-  <ENCENDER_B4AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1476</LINE></ENCENDER_B4AL>
-  <SALIR_MULTIPLEX_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1482</LINE></SALIR_MULTIPLEX_ALARMA>
+  <LLAMAR_SALIR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>949</LINE></LLAMAR_SALIR_ALARMA>
+  <APAGAR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>954</LINE></APAGAR_ALARMA>
+  <SALIR_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>962</LINE></SALIR_ALARMA>
+  <SALIDA_CONF_MALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1036</LINE></SALIDA_CONF_MALARMA>
+  <INC_CONT_ALARMA_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>983</LINE></INC_CONT_ALARMA_MIN>
+  <DEC_CONT_ALARMA_MIN><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1001</LINE></DEC_CONT_ALARMA_MIN>
+  <CONTINUA_U_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1025</LINE></CONTINUA_U_ALARMA>
+  <CONTINUA_D_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1029</LINE></CONTINUA_D_ALARMA>
+  <UNDERFLOW_UMIN_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1009</LINE></UNDERFLOW_UMIN_ALARMA>
+  <SALIDA_CONF_MIN_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1033</LINE></SALIDA_CONF_MIN_ALARMA>
+  <UNDERFLOW_DMIN_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1021</LINE></UNDERFLOW_DMIN_ALARMA>
+  <SALIDA_CONF_HORAA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1114</LINE></SALIDA_CONF_HORAA_ALARMA>
+  <INC_CONT2_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1053</LINE></INC_CONT2_ALARMA>
+  <DEC_CONT2_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1084</LINE></DEC_CONT2_ALARMA>
+  <REVISAR_LIMITE24_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1072</LINE></REVISAR_LIMITE24_ALARMA>
+  <GUARDAR_CICLO2_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1067</LINE></GUARDAR_CICLO2_ALARMA>
+  <SALIDA_CONF_HORA_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1081</LINE></SALIDA_CONF_HORA_ALARMA>
+  <DEC_UNIDADES_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1095</LINE></DEC_UNIDADES_ALARMA>
+  <GUARDAR_DEC_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1107</LINE></GUARDAR_DEC_ALARMA>
+  <RESTARU_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1102</LINE></RESTARU_ALARMA>
+  <SALIDA_CONF_HORA_ALARMA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1111</LINE></SALIDA_CONF_HORA_ALARMA1>
+  <MOST_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1176</LINE></MOST_HORA1>
+  <SALIDA_PDINT><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1219</LINE></SALIDA_PDINT>
+  <CONF_MIN1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1179</LINE></CONF_MIN1>
+  <CONF_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1184</LINE></CONF_HORA1>
+  <MOST_FECHA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1189</LINE></MOST_FECHA1>
+  <CONF_MESES1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1194</LINE></CONF_MESES1>
+  <CONF_DIAS1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1199</LINE></CONF_DIAS1>
+  <ALARMA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1204</LINE></ALARMA1>
+  <CONF_ALARMA_MIN1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1209</LINE></CONF_ALARMA_MIN1>
+  <CONF_ALARMA_HORA1><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1214</LINE></CONF_ALARMA_HORA1>
+  <SALIDA_PDINT_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1283</LINE></SALIDA_PDINT_ISR>
+  <MULTIPLEXH><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1331</LINE></MULTIPLEXH>
+  <MULTIPLEXF><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1368</LINE></MULTIPLEXF>
+  <LLAMAR_MULTIPLEX_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1327</LINE></LLAMAR_MULTIPLEX_ALARMA>
+  <FIN_ISR><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1442</LINE></FIN_ISR>
+  <MULTIPLEX_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1403</LINE></MULTIPLEX_ALARMA>
+  <ENCENDER_C4H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1343</LINE></ENCENDER_C4H>
+  <ENCENDER_C3H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1349</LINE></ENCENDER_C3H>
+  <ENCENDER_B5H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1355</LINE></ENCENDER_B5H>
+  <ENCENDER_B4H><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1361</LINE></ENCENDER_B4H>
+  <ENCENDER_C4F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1379</LINE></ENCENDER_C4F>
+  <ENCENDER_C3F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1385</LINE></ENCENDER_C3F>
+  <ENCENDER_B5F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1391</LINE></ENCENDER_B5F>
+  <ENCENDER_B4F><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1397</LINE></ENCENDER_B4F>
+  <ENCENDER_C4AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1414</LINE></ENCENDER_C4AL>
+  <ENCENDER_C3AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1420</LINE></ENCENDER_C3AL>
+  <ENCENDER_B5AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1426</LINE></ENCENDER_B5AL>
+  <ENCENDER_B4AL><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1432</LINE></ENCENDER_B4AL>
+  <SALIR_MULTIPLEX_ALARMA><FILE>C:\Users\yelen\OneDrive\Documentos\Proyecto_1\Proyecto_1\main.asm</FILE><LINE>1438</LINE></SALIR_MULTIPLEX_ALARMA>
  </LABELS>
 </ASSEMBLER_INFO>
