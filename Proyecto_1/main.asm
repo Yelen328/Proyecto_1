@@ -6,7 +6,7 @@
 // Created: 2/3/2025
 
 .include "M328PDEF.inc"
-.equ	T1VALUE			= 0xE17B
+.equ	T1VALUE			= 0xC2F7
 .equ	T0VALUE			= 0xB1
 .equ	MODOS			= 9
 
